@@ -11,6 +11,7 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 /* Container */
@@ -109,6 +110,11 @@ nav a:first-child {
 }
 
 /* Footer */
+html,
+body {
+  height: 100%;
+}
+
 footer {
   padding: 10px;
   clear: both;
@@ -137,7 +143,6 @@ h2, h3 {
 .main-section {
   float: left;
   width: 100%;
-  max-width: 960px;
   padding: 30px;
   margin: 0 0 40px;
   background: #ffffff;
@@ -224,12 +229,67 @@ input[type=submit] {
   border: 0 none;
 }
 
-/*@media screen and (max-width: 700px){
-  .workbox{background-color: #666666}
-}*/
+/* Width at 960px and below */
 
-@media screen and (max-width: 700px) {
-  body {
-    background-color: lightblue;
+@media screen and (max-width: 960px) {
+  .container {
+    width: 85%;
+    float: left;
+    padding: 0 10px;
   }
+}
+
+/* Width at 768px and below */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    float: left;
+    padding: 0 10px;
+  }
+}
+
+/* Width at 640px and below */
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 100%;
+    float: left;
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  .row {
+    padding: 40px 0 0 0;
+  }
+
+  #masterheader {
+    margin-bottom: 15px;
+  }
+  
+  #logo {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav {
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .bio-image {
+    width: 100%;
+    height: 100%;
+    float: none;
+  }
+
+  .workbox {
+    width: 100%;
+    
+  }
+
+
 }
